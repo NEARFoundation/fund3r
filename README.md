@@ -64,6 +64,23 @@ Change the currency in the following files
 - The invoice's logo is located in [api/assets/logo.png](api/assets/logo.png)
 - The website's logo is located in [ui/public/images/logo.svg](ui/public/images/logo.svg)
 
+##### Forms
+
+Customizing the form is a bit tedious because of lack of shared code between frontend and backend, and should be improved in the future.
+
+Here are the files involved, in the frontend:
+
+- Form Rendering component: [ui/components/grant-application-form/FormEditFieldsProject.tsx](ui/components/grant-application-form/FormEditFieldsProject.tsx)
+- Form Zod Schema: [ui/form-schemas/grantApplicationFormSchema.ts](ui/form-schemas/grantApplicationFormSchema.ts)
+- GrantApplication interface: [ui/types/GrantApplicationInterface.ts](ui/types/GrantApplicationInterface.ts)
+
+And in the backend:
+
+- GrantApplication Mongodb Model: [api/modules/GrantApplication/GrantApplicationModel.js](api/modules/GrantApplication/GrantApplicationModel.js)
+- Form Zod Schema [api/modules/GrantApplication/GrantApplicationFormSchema.js](api/modules/GrantApplication/GrantApplicationFormSchema.js)
+
+You will have to also change the related strings (as mentioned above).
+
 ### Run
 
 You can either run each of these services separately or run them all together using docker compose:
