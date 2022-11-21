@@ -33,25 +33,25 @@ The project requires a few API keys & settings to work properly, you need to set
 - Hello sign API Key
 - Hello sign client ID
 
-#### Customization
+### Customization
 
 There are a few easy to customize items, here are some hints to help you achieve that:
 
-##### Contract agreement
+#### Contract agreement
 
 The [api/templates/agreement.docx](api/templates/agreement.docx) file is the template used to generate the contract agreement, it uses variables that are replaced by the API
 
-##### Text
+#### Text
 
 The [ui/src/locales](ui/public/locales) folder and the [api/locales/en.json](api/locales/en.json) file are used to customize the text of the UI and of the error messages
 
 Note that some of the strings are currently duplicated
 
-##### AstroDAO proposal
+#### AstroDAO proposal
 
 The proposal creation is handled by this file [ui/services/sputnikContractService.ts](ui/services/sputnikContractService.ts)
 
-##### Currency
+#### Currency
 
 Change the currency in the following files
 
@@ -59,12 +59,12 @@ Change the currency in the following files
 - [api/config/grant.js](api/config/grant.js)
 - [ui/config/currency.ts](ui/config/currency.ts)
 
-##### Logos
+#### Logos
 
 - The invoice's logo is located in [api/assets/logo.png](api/assets/logo.png)
 - The website's logo is located in [ui/public/images/logo.svg](ui/public/images/logo.svg)
 
-##### Forms
+#### Forms
 
 Customizing the form is a bit tedious because of lack of shared code between frontend and backend, and should be improved in the future.
 
