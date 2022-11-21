@@ -35,7 +35,51 @@ The project requires a few API keys & settings to work properly, you need to set
 
 #### Customization
 
-Coming soon
+There are a few easy to customize items, here are some hints to help you achieve that:
+
+##### Contract agreement
+
+The [api/templates/agreement.docx](api/templates/agreement.docx) file is the template used to generate the contract agreement, it uses variables that are replaced by the API
+
+##### Text
+
+The [ui/src/locales](ui/public/locales) folder and the [api/locales/en.json](api/locales/en.json) file are used to customize the text of the UI and of the error messages
+
+Note that some of the strings are currently duplicated
+
+##### AstroDAO proposal
+
+The proposal creation is handled by this file [ui/services/sputnikContractService.ts](ui/services/sputnikContractService.ts)
+
+##### Currency
+
+Change the currency in the following files
+
+- [api/config/currency.js](api/config/currency.js)
+- [api/config/grant.js](api/config/grant.js)
+- [ui/config/currency.ts](ui/config/currency.ts)
+
+##### Logos
+
+- The invoice's logo is located in [api/assets/logo.png](api/assets/logo.png)
+- The website's logo is located in [ui/public/images/logo.svg](ui/public/images/logo.svg)
+
+##### Forms
+
+Customizing the form is a bit tedious because of lack of shared code between frontend and backend, and should be improved in the future.
+
+Here are the files involved, in the frontend:
+
+- Form Rendering component: [ui/components/grant-application-form/FormEditFieldsProject.tsx](ui/components/grant-application-form/FormEditFieldsProject.tsx)
+- Form Zod Schema: [ui/form-schemas/grantApplicationFormSchema.ts](ui/form-schemas/grantApplicationFormSchema.ts)
+- GrantApplication interface: [ui/types/GrantApplicationInterface.ts](ui/types/GrantApplicationInterface.ts)
+
+And in the backend:
+
+- GrantApplication Mongodb Model: [api/modules/GrantApplication/GrantApplicationModel.js](api/modules/GrantApplication/GrantApplicationModel.js)
+- Form Zod Schema [api/modules/GrantApplication/GrantApplicationFormSchema.js](api/modules/GrantApplication/GrantApplicationFormSchema.js)
+
+You will have to also change the related strings (as mentioned above).
 
 ### Run
 
