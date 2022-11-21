@@ -35,7 +35,34 @@ The project requires a few API keys & settings to work properly, you need to set
 
 #### Customization
 
-Coming soon
+There are a few easy to customize items, here are some hints to help you achieve that:
+
+##### Contract agreement
+
+The [api/templates/agreement.docx](api/templates/agreement.docx) file is the template used to generate the contract agreement, it uses variables that are replaced by the API
+
+##### Text
+
+The [ui/src/locales](ui/public/locales) folder and the [api/locales/en.json](api/locales/en.json) file are used to customize the text of the UI and of the error messages
+
+Note that some of the strings are currently duplicated
+
+##### AstroDAO proposal
+
+The proposal creation is handled by this file [ui/services/sputnikContractService.ts](ui/services/sputnikContractService.ts)
+
+##### Currency
+
+Change the currency in the following files
+
+- [api/config/currency.js](api/config/currency.js)
+- [api/config/grant.js](api/config/grant.js)
+- [ui/config/currency.ts](ui/config/currency.ts)
+
+##### Logos
+
+- The invoice's logo is located in [api/assets/logo.png](api/assets/logo.png)
+- The website's logo is located in [ui/public/images/logo.svg](ui/public/images/logo.svg)
 
 ### Run
 
