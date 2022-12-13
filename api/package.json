@@ -16,7 +16,7 @@
     "debug": "~2.6.9",
     "docx-templates": "^4.9.2",
     "dotenv": "^16.0.1",
-    "express": "~4.16.1",
+    "express": "~4.18.2",
     "express-basic-auth": "^1.2.1",
     "hellosign-sdk": "^2.1.0",
     "http-errors": "~1.6.3",
